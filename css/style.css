@@ -220,7 +220,10 @@ footer{
         text-align: center;
         font-family: "Roboto", sans-serif;
         color: var(--primary-color-text);
+        transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out; 
     }
+
+    
     .profile{
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -395,7 +398,6 @@ footer{
         margin-left: 28px;
     }
 }
-
 @media (min-width: 1025px) {
     .hamburger-menu {
         display: none; /*hide hamburger menu*/
@@ -430,12 +432,18 @@ footer{
         display: inline-block;
         text-transform: uppercase;
         list-style: none;
-        padding: 3px;
+        padding: 10px;
         font-size: 30px;
         
         text-align: center;
         font-family: "Roboto", sans-serif;
         color: var(--primary-color-text);
+        transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    }
+    .menu-list li:hover{
+        transform: scale(1.1);
+        text-shadow: 4px 4px 3px var(--primary-color-headlines), 8px 8px 3px var(--primary-color-headlines);
+        transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
     }
     .profile{
         display: grid;
