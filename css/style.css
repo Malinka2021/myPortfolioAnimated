@@ -1,0 +1,708 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+:root {
+    --primary-color-text: #8e918e;
+    --primary-color-headlines: #D5A2FE;
+    --primary-color-buttons: #a5f8b7;
+    --primary-color-background: #fafafa;
+    --primary-color-line: #edd7fa;
+    --secondary-color-text: #717471;
+    --secondary-color-line: #f3e9f9;  /* Added the missing '--' for the variable */
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    color: var(--primary-color-text);
+    background-color: var(--primary-color-background)
+}
+.menu {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.page-menu {
+    justify-self: end;
+}
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid var(--primary-color-text);
+    border-radius: 10px;
+    background-color: var(--primary-color-buttons);
+    margin: 20px;
+}
+.line {          /* Hamburger lines */
+    width: 70%;
+    height: 4px;
+    background-color: var(--primary-color-text);
+    border-radius: 10px;
+}
+.logo-span {
+    display: inline-block;
+    margin: 25px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--primary-color-headlines);
+}
+.profile{                /*container for profile image*/
+    text-align: center;
+}
+.profile-image img{
+    display: inline-block;
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+hr{                   /* horizontal line */
+    width: 100px;
+    height: 8px;
+    background-color: var(--primary-color-line);
+    border: none;
+    border-radius: 5px;
+}
+.headline h3{
+    font-family: 'Russo One', sans-serif;
+    font-size: 27px;
+    color: var(--primary-color-headlines);
+    text-align: center;
+    margin: 0;
+}
+.frame{
+    width: 100%;
+    text-align: center;
+}
+.frame img{
+    display: inline-block;
+    width: 288px;
+    height: 139px;
+    object-fit: cover;
+    margin: 20px;
+}
+.my-clients{
+    width: 100%;
+}
+.card{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+.card h4{
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: var(--primary-color-text);
+    margin: 0px;
+}
+.card span{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--secondary-color-text);
+    background-color: var(--secondary-color-line);
+    margin-bottom: 5px;
+    padding: 4px;
+}
+.card p {
+    margin: 10px;
+    color: var(--secondary-color-text);
+}
+.contact{
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+.contact button{
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: var(--secondary-color-text);
+    background-color: var(--primary-color-buttons);
+    padding: 10px 45px;
+    border-radius: 10px;
+    margin: 30px;
+}
+.social-media{
+    width: 100%;
+    text-align: center;
+}
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+}
+.social-icons ul li{
+    display: inline-block;
+    margin: 10px;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+}
+.menu-list{
+    display: none; /*in mobile width do not show page menu*/
+}
+.profile-info{
+    display: none;
+}
+.gallery{
+    display: none;
+}
+.my-works-intro{
+    display: none;
+}
+.contact-intro{
+    display: none;
+}
+.contact h3{
+    display: none;
+}
+.contact-form{
+    display: none;
+}
+.contact-details{
+    display: none;
+}
+#contact-me-headline{
+    display: none;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .hamburger-menu {
+        display: none; /*hide hamburger menu*/
+    }
+    .menu{
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+    .page-menu {
+        width: 100%;
+        justify-self: center;
+        
+    }
+    .logo-span{
+        display: inline-block;
+        margin: 25px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        color: var(--primary-color-headlines);
+    }
+    .menu-list{
+        display: block;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 16px 0;
+        text-align: center;
+    }
+    .menu-list li{
+        display: inline-block;
+        text-transform: uppercase;
+        list-style: none;
+        padding: 3px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        color: var(--primary-color-text);
+    }
+    .profile{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .profile-image img{
+        width: 259px;
+        height: 259px;
+    }
+    .profile-info{
+        display: grid;
+        justify-items: start;
+        align-items: center;
+    }
+    .profile-details span{
+        display: block; 
+        width: 248px;
+        font-size: 32px;
+        font-family: 'Roboto', sans-serif;     
+        text-align: start;
+        margin-left: 24px;
+        font-weight: 400;
+        color: var(--primary-color-text);
+    }
+    .profile-details button {
+        background-color: var(--primary-color-buttons);
+        font-size: 24px;
+        width: 285px;
+        height: 66px;
+        border-radius: 10px;
+        border: none;
+        color: var(--primary-color-text);
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 19px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .main{
+        margin-top: 35px; /*move main down*/
+    }
+    .my-works .frame { /*2 classes together*/
+        display: none;
+    }
+    hr{               /*no dot!*/
+        margin-left: 32px;
+        width: 160px;
+        height: 12px;
+        margin-bottom: 24px;
+    }
+    .headline h3{
+        padding-left: 32px;
+        text-align: start;
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+    .social-media h4{
+        padding-left: 32px;
+        text-align: start;
+        font-size: 30px;
+        font-family: "Roboto", sans-serif;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+        margin-top: 32px; /*move gallery down*/
+    }
+    .gallery-item{
+        text-align: center;
+    }
+    .gallery img{
+        width: 299px;
+        height: 149px;
+        object-fit: cover;
+    }
+    .my-clients{
+        gap: 10px;
+        margin-top: 32px; /*move my clients down*/
+    }
+    .my-clients .card{
+        margin-top: 32px; /*move my clients down*/
+        border: none;
+    }
+    .my-clients p{
+        width: 500px;
+        margin: 15px auto;
+    }
+    .card{
+        margin-top: 32px; /*move my clients down*/
+    }
+    .btn-contact{
+        display: none;/*move contact down*/
+    }
+    .contact-intro{
+        display: block;
+        width: 100%;
+    }
+    .contact-intro p{
+        width: 700px;
+        text-align: start;
+        margin-left: 32px;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        color: var(--secondary-color-text);
+    }
+    .contact-form{
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+       
+    }
+    .contact-form form{
+        display: block;
+        text-align: start;
+        box-sizing: border-box;
+        padding: 32px;
+       
+    }
+    input, textarea{         /*name, email, message area*/
+        width: 90%;
+        background-color: var(--primary-color-buttons);
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+    input{
+        height: 38px;
+    }
+    #contact-me-headline {
+        display: block;
+    }
+    .contact-form button {
+        width: 160px;
+        height: 40px;
+        background-color: #dcdfdc;
+        text-transform: none;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+        border-radius: 0;
+        border: 1px solid var(--primary-color-text);
+    }
+    .label{
+        margin-bottom: 12px;
+    }
+    .contact-details{
+        display: block;
+        width: 100%;
+        text-align: start;
+        margin-left: 32px;
+    }
+    .contact-details ul{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: var(--secondary-color-text);
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .contact-info img{
+        width: 55px;
+        height: 45px;
+        margin: 8px;
+        margin-bottom: 0;
+        margin-right: 15px;
+       
+    }
+    .social-media ul{
+        text-align: start;
+        margin-left: 28px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hamburger-menu {
+        display: none; /*hide hamburger menu*/
+    }
+    .menu{
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+    .page-menu {
+        width: 100%;
+        justify-self: center;
+    }
+    .logo-span{
+        display: inline-block;
+        margin: 32px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 48px;
+        color: var(--primary-color-headlines);
+        
+    }
+    .menu-list{
+        display: block;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .menu-list li{
+        display: inline-block;
+        text-transform: uppercase;
+        list-style: none;
+        padding: 3px;
+        font-size: 30px;
+        
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        color: var(--primary-color-text);
+    }
+    .profile{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .profile-image img{
+        width: 482px;
+        height: 482px;
+        margin: 32px;
+    }
+    .profile-info{
+        display: grid;
+        justify-items: center;
+        align-items: end;
+    }
+    .profile-details{
+        margin-bottom: 64px;
+    }
+    .profile-details span{
+        display: block; 
+        width: 381px;
+        font-size: 48px;
+        font-family: 'Roboto', sans-serif;     
+        text-align: start;
+        font-weight: 400;
+        color: var(--primary-color-text);
+        margin-bottom: 10px;
+    }
+    .profile-details button {
+        background-color: var(--primary-color-buttons);
+        font-size: 28px;
+        width: 381px;
+        height: 101px;
+        border-radius: 10px;
+        border: none;
+        color: var(--primary-color-text);
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 19px;
+        margin-top: 10px;
+    }
+    .main{
+        margin-top: 35px; /*move main down*/
+    }
+    hr{                   /* horizontal line */
+        width: 212px;
+        height: 14px;
+        margin-left: 32px;
+        margin-bottom: 24px;
+    }
+    .headline h3{
+        font-size: 40px;
+        text-align: start;
+        margin-left: 32px;
+        margin-bottom: 28px;
+    }
+    .my-works .frame { /*2 classes together*/
+        display: none;
+    }
+    .headline h3{
+       
+        text-align: start;
+    }
+    .social-media h4{
+        padding-left: 32px;
+        text-align: start;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+        margin-top: 32px; /*move gallery down*/
+    }
+    .gallery-item{
+        text-align: center;
+    }
+    .gallery img{
+        width: 333px;
+        height: 163px;
+        object-fit: cover;
+    }
+    .my-clients{
+        margin-top: 48px; /*move my clients down*/
+    }
+    .my-clients p{
+        width: 700px;
+        margin: 15px auto;
+    }
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 93%;
+        margin: 24px auto;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        border: 1px solid var(--primary-color-text);
+    
+    }
+    .card h4{
+        font-family: 'Russo One', sans-serif;
+        font-size: 36px;
+        color: var(--primary-color-text);
+        margin: 0px;
+    }
+    .card span{
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: var(--secondary-color-text);
+        background-color: var(--secondary-color-line);
+        margin-bottom: 5px;
+        padding: 4px;
+    }
+    .card p {
+        margin: 0;
+        color: var(--secondary-color-text);
+        font-size: 18px;
+    }
+    .card-image img{
+        width: 160px;
+        height: 140px;
+        object-fit: cover;
+        margin-top: 64px;
+    }
+    .card-text-content{
+        text-align: start;
+        box-sizing: border-box; /*not change box size*/
+        padding: 40px;
+        padding-left: 0;
+    }
+    .role-description{
+        display: inline-block;
+        margin: 24px 0;
+        margin-right: 16px;
+    }
+    .btn-contact{
+        display: none;/*move contact down*/
+    }
+    .get-in-touch{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+    .contact-intro{
+        display: block;
+        width: 100%;
+    }
+    .contact-intro p{
+        width: 664px;
+        text-align: start;
+        margin-left: 32px;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        color: var(--secondary-color-text);
+    }
+    .contact-form{
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+       
+    }
+    .contact-form form{
+        text-align: start;
+        box-sizing: border-box;
+        padding: 32px;
+       
+    }
+    input, textarea{         /*name, email, message area*/
+        width: 90%;
+        background-color: var(--primary-color-buttons);
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+    input{
+        height: 38px;
+
+    }
+    .contact-form button {
+        width: 160px;
+        height: 40px;
+        background-color: #dcdfdc;
+        text-transform: none;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+        border-radius: 0;
+        border: 1px solid var(--primary-color-text);
+    }
+    #contact-me-headline {
+        display: block;
+    }
+    .label{
+        margin-bottom: 12px;
+    }
+    .contact-details{
+        display: block;
+        width: 100%;
+        text-align: start;
+        margin-left: 32px;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        box-sizing: border-box;
+        padding: 32px;
+    }
+    .contact-details ul{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: var(--secondary-color-text);
+        padding: 0;
+        list-style-type: none;
+    }
+    .contact-details ul li{
+        margin: 32px 0;
+        font-size: 24px;
+    }
+    .contact-info img{
+        width: 55px;
+        height: 45px;
+        margin: 8px;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .social-media{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        padding-left: 32px;
+       
+       
+    }
+    .social-media .card{
+        border: none;
+        margin: 0 auto;
+    }
+    .social-media h4{
+        text-align: start;
+        font-size: 32px;
+        padding: 0;
+    }
+    .social-media ul{
+        text-align: start;
+        margin-left: 20px;
+        margin-bottom: 250px;
+      
+
+    }
+    .social-icons ul {
+        list-style: none;
+        padding-bottom: 32px;
+        margin: 0;
+    }
+    .social-icons ul li{
+        display: inline-block;
+        margin: 10px;
+    }
+    .my-works-intro{
+        display: block;
+    }
+    .my-works-intro p{
+        width: 870px;
+        margin-left: 32px;
+        font-size: 18px;
+        color: var(--secondary-color-text);
+    }
+}
