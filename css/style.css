@@ -89,6 +89,15 @@ body {
 .menu-panel.active {
     right: 0; /* Align to the right, 0px from right */
 }
+.menu-panel button {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+}
 
 .logo-span {
     display: inline-block;
