@@ -11,7 +11,7 @@
     --secondary-color-line: #f3e9f9;  /* Added the missing '--' for the variable */
 }
 
-body {
+html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -61,7 +61,6 @@ body {
     text-transform: uppercase;
     text-align: center;
     background-color: var(--primary-color-buttons);
-    z-index: 10;
     box-sizing: border-box;
     transition: right 1s ease-in-out; /* Smooth transition for the menu panel */
 }
